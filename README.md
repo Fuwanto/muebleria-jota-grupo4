@@ -9,4 +9,5 @@ Proyecto grupal del Grupo 4 desarrollado en el marco de la Certificación Avanza
 | Julieta Delfina Sayago | [julisayago](https://github.com/julisayago) |
 | Josefina Gorrochategui | [josefinagorro](https://github.com/josefinagorro) |
 | Antonio Wu | [Antoniooo-Wu](https://github.com/Antonioo-Wu) |
+| Maximiliano Gabriel Crespin | [MaxawaC](https://github.com/MaxawaC) |
 
