@@ -1,0 +1,15 @@
+/* reset basico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* colores de la marca */
+  --color-primary: #a0522d;
+  --color-secondary: #87a968;
+  --color-background: #f5e6d3;
+  --color-accent: #d4a437;
+  --color-soft: #c47a6d;
+}

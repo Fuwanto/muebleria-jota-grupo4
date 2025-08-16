@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/products.css" />
+    <title>Catálogo | Mueblería Hermanos Jota</title>
+  </head>
+  <body>
+    <!-- Header común (mismo que index.html) -->
+
+    <main class="catalogo-page">
+      <div class="container">
+        <h1 class="page-title">Nuestro Catálogo</h1>
+
+        <!-- Campo de búsqueda -->
+        <div class="search-container">
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Buscar muebles..."
+            aria-label="Buscar productos"
+          />
+          <button id="search-button">
+            <img src="/assets/icons/search-icon.svg" alt="Buscar" />
+          </button>
+        </div>
+
+        <!-- Contenedor de productos (se llena con js) -->
+        <div class="product-grid" id="product-grid">
+          <!-- <div class="product-card">
+            <div class="product-image-container">
+              <img src="${product.imagen}" alt="${product.nombre}" />
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">${product.nombre}</h3>
+              <p class="product-description">${product.descripcion}</p>
+              <ul class="product-details">
+                <li><strong>Medidas:</strong> ${product.medidas}</li>
+                <li><strong>Materiales:</strong> ${product.materiales}</li>
+                ${ product.acabado ? `
+                <li><strong>Acabado:</strong> ${product.acabado}</li>` : "" } 
+                ${product.peso ? `<li><strong>Peso:</strong> ${product.peso}</li>` : ""} 
+                ${ product.capacidad ? `<li><strong>Capacidad:</strong> ${product.capacidad}</li>` : "" }
+              </ul>
+              <a
+                href="producto.html?id=${product.id}"
+                class="detalle-button"
+                >Ver Detalle</a
+              >
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer común (mismo que index.html) -->
+
+    <!-- Scripts -->
+    <script src="/js/catalogo/data.js"></script>
+    <script src="/js/catalogo/products.js"></script>
+  </body>
+</html>
