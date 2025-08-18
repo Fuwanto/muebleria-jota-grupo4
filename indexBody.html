@@ -4,26 +4,40 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title> indexHJ </title>
+        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="css/indexBody.css" />
     </head>
     <body>
+         <header class="site-header">
+            <div class="container header-inner">
+                 <a href="index.html" class="brand">
+                    <img class="brand-logo" src="assets/icons/logo.svg" alt="Hermanos Jota">
+                    <span class="brand-name"><strong>Hermanos Jota</strong></span>
+                </a>
+                <nav class="main-nav" aria-label="Navegación principal">
+                    <ul>
+                        <li><a class="active" href="indexBody.html">Inicio</a></li>
+                        <li><a  href="productos.html">Productos</a></li>
+                        <li><a href="/contacto.html">Contacto</a></li>
+                    </ul>
+                </nav>
+                <button class="cart-button" aria-label="Carrito">
+                     <span class="cart-icon" aria-hidden="true">🛒</span>
+                     <span id="cart-count" class="cart-count">0</span>
+                </button>
+            </div>
+        </header>
   <!-- ===== Header común  ===== -->
         <main class="home-page"> 
             <!-- ================= HERO ================= -->
             <section class="hero" aria-label="Presentación">
-            <div class="container hero-inner">
-                <!-- Texto del hero -->
-                <div class="hero-text">
-                <h1>Viví la calidez del diseño atemporal</h1>
-                <p>Diseñados con materiales nobles y manos expertas.</p>
-                <a class="btn-primary" href="productos.html">Ver productos</a>
+                <div class="hero-overlay">
+                    <div class="hero-text">
+                        <h1>Viví la calidez del diseño atemporal</h1>
+                        <p>Diseñados con materiales nobles y manos expertas.</p>
+                        <a class="btn-primary" href="productos.html">Ver productos</a>
+                    </div>
                 </div>
-
-                <!-- Imagen/video del hero -->
-                <figure class="hero-media">
-                <!-- Usá una imagen grande de /assets; el overlay/posicionamiento lo hará el CSS -->
-                <img src="assets/hero/hero_ banner.png" alt="Muebles de madera en living moderno" />
-                </figure>
-            </div>
             </section>
 
         
@@ -90,7 +104,30 @@
                 </div>
             </section>
         </main>
+    
+        <footer class="site-footer" id="contacto">
+                <div class="container footer-inner">
+                    <div class="footer-col footer-brand">
+                        <img class="brand-logo" src="assets/icons/logo.svg" alt="Hermanos Jota">
+                        <h4>Showroom y Taller</h4>
+                        <p><strong>Hermanos Jota — Casa Taller</strong></p>
+                        <p>Av. San Juan 2847<br>C1232AAB — Barrio de San Cristóbal<br>Ciudad Autónoma de Buenos Aires<br>Argentina</p>
+                        <p><strong>Horarios:</strong><br>Lunes a Viernes: 10:00 - 19:00<br>Sábados: 10:00 - 14:00</p>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Contacto Digital</h4>
+                        <ul class="footer-list">
+                            <li><strong>Sitio web:</strong> <a href="https://www.hermanosjota.com.ar" target="_blank" rel="noopener">www.hermanosjota.com.ar</a></li>
+                            <li><strong>Email general:</strong> <a href="mailto:info@hermanosjota.com.ar">info@hermanosjota.com.ar</a></li>
+                            <li><strong>Ventas:</strong> <a href="mailto:ventas@hermanosjota.com.ar">ventas@hermanosjota.com.ar</a></li>
+                            <li><strong>Instagram:</strong> <a href="https://instagram.com/hermanosjota_ba" target="_blank" rel="noopener">@hermanosjota_ba</a></li>
+                            <li><strong>WhatsApp:</strong> <a href="https://wa.me/541145678900" target="_blank" rel="noopener">+54 11 4567-8900</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-copy">
+                    <div class="container">© 2025 Hermanos Jota. Todos los derechos reservados. Este manual es propiedad de Hermanos Jota Muebles.</div>
+                </div>
+        </footer>
     </body>
-  <!-- ===== Footer común (lo hace otra persona) ===== -->
-  <!-- <footer> … </footer> -->
 </html>
