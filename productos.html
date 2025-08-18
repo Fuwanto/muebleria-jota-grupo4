@@ -16,13 +16,17 @@
           </a>
           <nav class="main-nav" aria-label="Navegación principal">
               <ul>
-                  <li><a class="active" href="index.html">Inicio</a></li>
-                  <li><a href="productos.html">Productos</a></li>
+                  <li><a href="index.html">Inicio</a></li>
+                  <li><a class="active" href="productos.html">Productos</a></li>
                   <li><a href="/contacto.html">Contacto</a></li>
               </ul>
           </nav>
+          <button class="cart-button" aria-label="Carrito">
+            <span class="cart-icon" aria-hidden="true">🛒</span>
+            <span id="cart-count" class="cart-count">0</span>
+          </button>
       </div>
-    </header>
+  </header>
 
     <main class="catalogo-page">
       <div class="container">
@@ -92,10 +96,11 @@
       <div class="footer-copy">
           <div class="container">© 2025 Hermanos Jota. Todos los derechos reservados. Este manual es propiedad de Hermanos Jota Muebles.</div>
       </div>
-    </footer>
+  </footer>
 
     <!-- Scripts -->
     <script src="/js/catalogo/data.js"></script>
+    <script src="/js/catalogo/cart.js"></script>
     <script src="/js/catalogo/products.js"></script>
   </body>
 </html>
