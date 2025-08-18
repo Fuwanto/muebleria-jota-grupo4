@@ -13,3 +13,140 @@
   --color-accent: #d4a437;
   --color-soft: #c47a6d;
 }
+
+body {
+  font-family: "Inter", sans-serif, "Playfair Display", Georgia;
+  color: #2b2b2b;
+  background: var(--color-background);
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* header */
+.site-header {
+  background: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.brand-logo {
+  width: 32px;
+  height: 32px;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 18px;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #333;
+  padding: 8px 10px;
+  border-radius: 6px;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+/* footer */
+.site-footer {
+  background: #fff;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  margin-top: 32px;
+}
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: 1.6fr 1.2fr;
+  gap: 28px;
+  padding: 28px 0;
+}
+
+.footer-col {
+  display: grid;
+  gap: 10px;
+}
+
+.footer-inner > .footer-col:not(:first-child) {
+  border-left: 1px solid rgba(0, 0, 0, 0.06);
+  padding-left: 20px;
+}
+
+.footer-col h4 {
+  font-family: "Playfair Display", Georgia;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.95rem;
+  margin: 6px 0 8px;
+}
+
+.footer-brand .brand-logo {
+  width: 40px;
+  height: 40px;
+}
+
+.footer-brand p,
+.footer-col p {
+  color: #555;
+  line-height: 1.55;
+}
+
+.footer-list {
+  list-style: none;
+  display: grid;
+  gap: 8px;
+}
+
+.footer-links ul {
+  list-style: none;
+}
+
+.footer-links a,
+.footer-list a {
+  text-decoration: none;
+  color: #2b2b2b;
+}
+
+.footer-links a:hover,
+.footer-list a:hover {
+  color: var(--color-primary);
+}
+
+.footer-contact p {
+  color: #444;
+}
+
+.footer-copy {
+  background: #fafafa;
+  color: #666;
+  font-size: 0.9rem;
+  padding: 12px 0;
+  text-align: center;
+}
+
