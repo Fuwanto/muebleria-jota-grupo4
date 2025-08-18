@@ -8,31 +8,49 @@
     <title>Catálogo | Mueblería Hermanos Jota</title>
   </head>
   <body>
-    <!-- Header común (mismo que index.html) -->
+    <header class="site-header">
+      <div class="container header-inner">
+          <a href="index.html" class="brand">
+              <img class="brand-logo" src="assets/icons/logo.svg" alt="Hermanos Jota">
+              <span class="brand-name"><strong>Hermanos Jota</strong></span>
+          </a>
+          <nav class="main-nav" aria-label="Navegación principal">
+              <ul>
+                  <li><a href="index.html">Inicio</a></li>
+                  <li><a class="active" href="productos.html">Productos</a></li>
+                  <li><a href="/contacto.html">Contacto</a></li>
+              </ul>
+          </nav>
+          <button class="cart-button" aria-label="Carrito">
+            <span class="cart-icon" aria-hidden="true">🛒</span>
+            <span id="cart-count" class="cart-count">0</span>
+          </button>
+      </div>
+  </header>
 
     <main class="catalogo-page">
       <div class="container">
         <h1 class="page-title">Nuestro Catálogo</h1>
 
         <!-- Campo de búsqueda -->
-        <div class="search-container">
+        <form class="search-container" role="search">
           <input
             type="text"
             id="search-input"
             placeholder="Buscar muebles..."
             aria-label="Buscar productos"
           />
-          <button id="search-button">
+          <button id="search-button" type="submit">
             <img src="/assets/icons/search-icon.svg" alt="Buscar" />
           </button>
-        </div>
+        </form>
 
         <!-- Contenedor de productos (se llena con js) -->
-        <div class="product-grid" id="product-grid">
-          <!-- <div class="product-card">
-            <div class="product-image-container">
+        <section class="product-grid" id="product-grid">
+          <!-- <article class="product-card">
+            <figure class="product-image-container">
               <img src="${product.imagen}" alt="${product.nombre}" />
-            </div>
+            </figure>
             <div class="product-info">
               <h3 class="product-name">${product.nombre}</h3>
               <p class="product-description">${product.descripcion}</p>
@@ -50,15 +68,39 @@
                 >Ver Detalle</a
               >
             </div>
-          </div> -->
-        </div>
+          </article> -->
+        </section>
       </div>
     </main>
 
-    <!-- Footer común (mismo que index.html) -->
+    <footer class="site-footer" id="contacto">
+      <div class="container footer-inner">
+          <div class="footer-col footer-brand">
+              <img class="brand-logo" src="assets/icons/logo.svg" alt="Hermanos Jota">
+              <h4>Showroom y Taller</h4>
+              <p><strong>Hermanos Jota — Casa Taller</strong></p>
+              <p>Av. San Juan 2847<br>C1232AAB — Barrio de San Cristóbal<br>Ciudad Autónoma de Buenos Aires<br>Argentina</p>
+              <p><strong>Horarios:</strong><br>Lunes a Viernes: 10:00 - 19:00<br>Sábados: 10:00 - 14:00</p>
+          </div>
+          <div class="footer-col">
+              <h4>Contacto Digital</h4>
+              <ul class="footer-list">
+                  <li><strong>Sitio web:</strong> <a href="https://www.hermanosjota.com.ar" target="_blank" rel="noopener">www.hermanosjota.com.ar</a></li>
+                  <li><strong>Email general:</strong> <a href="mailto:info@hermanosjota.com.ar">info@hermanosjota.com.ar</a></li>
+                  <li><strong>Ventas:</strong> <a href="mailto:ventas@hermanosjota.com.ar">ventas@hermanosjota.com.ar</a></li>
+                  <li><strong>Instagram:</strong> <a href="https://instagram.com/hermanosjota_ba" target="_blank" rel="noopener">@hermanosjota_ba</a></li>
+                  <li><strong>WhatsApp:</strong> <a href="https://wa.me/541145678900" target="_blank" rel="noopener">+54 11 4567-8900</a></li>
+              </ul>
+          </div>
+      </div>
+      <div class="footer-copy">
+          <div class="container">© 2025 Hermanos Jota. Todos los derechos reservados. Este manual es propiedad de Hermanos Jota Muebles.</div>
+      </div>
+  </footer>
 
     <!-- Scripts -->
     <script src="/js/catalogo/data.js"></script>
+    <script src="/js/catalogo/cart.js"></script>
     <script src="/js/catalogo/products.js"></script>
   </body>
 </html>

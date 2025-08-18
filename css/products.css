@@ -29,9 +29,7 @@
 }
 
 #search-button {
-  flex: 0 0 auto;
   width: 50px;
-  display: flex;
   align-items: center;
   justify-content: center;
   background-color: var(--color-accent);
@@ -78,7 +76,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--color-background);
+  background-color: color-mix(
+    in srgb,
+    var(--color-background) 70%,
+    var(--color-primary) 30%
+  );
 }
 
 .product-image-container img {

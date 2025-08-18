@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const productGrid = document.getElementById("product-grid")
   const searchInput = document.getElementById("search-input")
-  const searchButton = document.getElementById("search-button")
+  const searchForm = document.querySelector(".search-container")
 
   // Simular carga asíncrona de productos
   async function loadProducts() {
@@ -29,12 +29,12 @@ document.addEventListener("DOMContentLoaded", () => {
     products.forEach((product) => {
       const productCard = document.createElement("div")
       productCard.className = "product-card"
-      productCard.innerHTML = `<div class="product-card">
-  <div class="product-image-container">
+      productCard.innerHTML = `<article class="product-card">
+  <figure class="product-image-container">
     <img src="${product.imagen}" alt="${product.nombre}" />
-  </div>
+  </figure>
   <div class="product-info">
-    <h3 class="product-name">${product.nombre}</h3>
+    <h2 class="product-name">${product.nombre}</h2>
     <p class="product-description">${product.descripcion}</p>
     <ul class="product-details">
       <li><strong>Medidas:</strong> ${product.medidas}</li>
@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
       product.id
     }" class="detalle-button">Ver Detalle</a>
   </div>
-</div>
+</article>
   `
       productGrid.appendChild(productCard)
     })
@@ -63,23 +63,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // filtro de busqueda
   function searchProducts() {
-    const searchTerm = searchInput.value.toLowerCase().trim()
+    const searchTerm = searchInput.value
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .trim()
     if (searchTerm === "") {
       renderProducts(productos)
       return
     }
 
-    const filteredProducts = productos.filter((product) =>
-      product.nombre.toLowerCase().includes(searchTerm)
-    )
+    const filteredProducts = productos.filter((product) => {
+      const nombreNormalizado = product.nombre
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+      return nombreNormalizado.includes(searchTerm)
+    })
 
     renderProducts(filteredProducts)
   }
 
   // Event listeners
-  searchButton.addEventListener("click", searchProducts)
-  searchInput.addEventListener("keyup", (e) => {
-    if (e.key === "Enter") searchProducts()
+  searchForm.addEventListener("submit", (e) => {
+    e.preventDefault()
+    searchProducts()
   })
 
   // Inicializar
