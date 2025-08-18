@@ -63,15 +63,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // filtro de busqueda
   function searchProducts() {
-    const searchTerm = searchInput.value.toLowerCase().trim()
+    const searchTerm = searchInput.value
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .trim()
     if (searchTerm === "") {
       renderProducts(productos)
       return
     }
 
-    const filteredProducts = productos.filter((product) =>
-      product.nombre.toLowerCase().includes(searchTerm)
-    )
+    const filteredProducts = productos.filter((product) => {
+      const nombreNormalizado = product.nombre
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+      return nombreNormalizado.includes(searchTerm)
+    })
 
     renderProducts(filteredProducts)
   }

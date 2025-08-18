@@ -15,17 +15,17 @@
         <h1 class="page-title">Nuestro Catálogo</h1>
 
         <!-- Campo de búsqueda -->
-        <div class="search-container">
+        <from class="search-container" role="search">
           <input
             type="text"
             id="search-input"
             placeholder="Buscar muebles..."
             aria-label="Buscar productos"
           />
-          <button id="search-button">
+          <button id="search-button" type="submit">
             <img src="/assets/icons/search-icon.svg" alt="Buscar" />
           </button>
-        </div>
+        </from>
 
         <!-- Contenedor de productos (se llena con js) -->
         <section class="product-grid" id="product-grid">
