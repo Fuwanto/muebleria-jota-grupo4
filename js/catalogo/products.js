@@ -29,12 +29,12 @@ document.addEventListener("DOMContentLoaded", () => {
     products.forEach((product) => {
       const productCard = document.createElement("div")
       productCard.className = "product-card"
-      productCard.innerHTML = `<div class="product-card">
-  <div class="product-image-container">
+      productCard.innerHTML = `<article class="product-card">
+  <figure class="product-image-container">
     <img src="${product.imagen}" alt="${product.nombre}" />
-  </div>
+  </figure>
   <div class="product-info">
-    <h3 class="product-name">${product.nombre}</h3>
+    <h2 class="product-name">${product.nombre}</h2>
     <p class="product-description">${product.descripcion}</p>
     <ul class="product-details">
       <li><strong>Medidas:</strong> ${product.medidas}</li>
@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
       product.id
     }" class="detalle-button">Ver Detalle</a>
   </div>
-</div>
+</article>
   `
       productGrid.appendChild(productCard)
     })
