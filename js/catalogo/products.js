@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const productGrid = document.getElementById("product-grid")
   const searchInput = document.getElementById("search-input")
-  const searchButton = document.getElementById("search-button")
+  const searchForm = document.querySelector(".search-container")
 
   // Simular carga asíncrona de productos
   async function loadProducts() {
@@ -85,9 +85,9 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Event listeners
-  searchButton.addEventListener("click", searchProducts)
-  searchInput.addEventListener("keyup", (e) => {
-    if (e.key === "Enter") searchProducts()
+  searchForm.addEventListener("submit", (e) => {
+    e.preventDefault()
+    searchProducts()
   })
 
   // Inicializar
