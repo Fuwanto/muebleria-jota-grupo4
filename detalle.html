@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hermanos Jota</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/detalle.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="index.html" class="brand">
+          <img
+            class="brand-logo"
+            src="assets/icons/logo.svg"
+            alt="Hermanos Jota"
+          />
+          <span class="brand-name"><strong>Hermanos Jota</strong></span>
+        </a>
+        <nav class="main-nav" aria-label="Navegación principal">
+          <ul>
+            <li><a class="active" href="indexBody.html">Inicio</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="/contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+        <button class="cart-button" aria-label="Carrito">
+          <span class="cart-icon" aria-hidden="true">🛒</span>
+          <span id="cart-count" class="cart-count">0</span>
+        </button>
+      </div>
+    </header>
+    <main class="product-detail-page">
+      <div class="product-detail-container">
+        <div class="product-detail-image">
+          <img src="./assets/productos/aparador_uspallata.png" alt="Aparador de madera modelo Uspallata" />
+        </div>
+        <div class="product-detail-info">
+          <h2 class="product-detail-name">Aparador Uspallata</h2>
+          <p class="product-detail-price">$500.000</p>
+          <p class="product-detail-description">
+            Aparador de seis puertas fabricado en nogal sostenible con tiradores
+            metálicos en acabado latón. Su silueta minimalista realza el veteado
+            natural de la madera, creando una pieza que combina funcionalidad y
+            elegancia atemporal para espacios contemporáneos.
+          </p>
+          <table class="product-detail-table">
+            <tr>
+              <th>Medidas</th>
+              <td>180 × 45 × 75 cm</td>
+            </tr>
+            <tr>
+              <th>Materiales</th>
+              <td>Nogal macizo FSC®, herrajes de latón</td>
+            </tr>
+            <tr>
+              <th>Acabado</th>
+              <td>Aceite natural ecológico</td>
+            </tr>
+            <tr>
+              <th>Peso</th>
+              <td>68 kg</td>
+            </tr>
+            <tr>
+              <th>Capacidad</th>
+              <td>6 compartimentos interiores</td>
+            </tr>
+          </table>
+          <button class="add-to-cart">🛒 Añadir al carrito</button>
+        </div>
+      </div>
+    </main>
+    <footer class="site-footer" id="contacto">
+      <div class="container footer-inner">
+        <div class="footer-col footer-brand">
+          <img
+            class="brand-logo"
+            src="assets/icons/logo.svg"
+            alt="Hermanos Jota"
+          />
+          <h4>Showroom y Taller</h4>
+          <p><strong>Hermanos Jota — Casa Taller</strong></p>
+          <p>
+            Av. San Juan 2847<br />C1232AAB — Barrio de San Cristóbal<br />Ciudad
+            Autónoma de Buenos Aires<br />Argentina
+          </p>
+          <p>
+            <strong>Horarios:</strong><br />Lunes a Viernes: 10:00 - 19:00<br />Sábados:
+            10:00 - 14:00
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Contacto Digital</h4>
+          <ul class="footer-list">
+            <li>
+              <strong>Sitio web:</strong>
+              <a
+                href="https://www.hermanosjota.com.ar"
+                target="_blank"
+                rel="noopener"
+                >www.hermanosjota.com.ar</a
+              >
+            </li>
+            <li>
+              <strong>Email general:</strong>
+              <a href="mailto:info@hermanosjota.com.ar"
+                >info@hermanosjota.com.ar</a
+              >
+            </li>
+            <li>
+              <strong>Ventas:</strong>
+              <a href="mailto:ventas@hermanosjota.com.ar"
+                >ventas@hermanosjota.com.ar</a
+              >
+            </li>
+            <li>
+              <strong>Instagram:</strong>
+              <a
+                href="https://instagram.com/hermanosjota_ba"
+                target="_blank"
+                rel="noopener"
+                >@hermanosjota_ba</a
+              >
+            </li>
+            <li>
+              <strong>WhatsApp:</strong>
+              <a
+                href="https://wa.me/541145678900"
+                target="_blank"
+                rel="noopener"
+                >+54 11 4567-8900</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-copy">
+        <div class="container">
+          © 2025 Hermanos Jota. Todos los derechos reservados. Este manual es
+          propiedad de Hermanos Jota Muebles.
+        </div>
+      </div>
+    </footer>
+    <!-- scripts -->
+    <script src="js/catalogo/cart.js"></script>
+  </body>
+</html>
