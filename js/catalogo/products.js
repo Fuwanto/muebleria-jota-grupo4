@@ -36,26 +36,15 @@ document.addEventListener("DOMContentLoaded", () => {
   <div class="product-info">
     <h2 class="product-name">${product.nombre}</h2>
     <p class="product-description">${product.descripcion}</p>
-    <ul class="product-details">
-      <li><strong>Medidas:</strong> ${product.medidas}</li>
-      <li><strong>Materiales:</strong> ${product.materiales}</li>
-      ${
-        product.acabado
-          ? `<li><strong>Acabado:</strong> ${product.acabado}</li>`
-          : ""
-      }
-      ${product.peso ? `<li><strong>Peso:</strong> ${product.peso}</li>` : ""}
-      ${
-        product.capacidad
-          ? `<li><strong>Capacidad:</strong> ${product.capacidad}</li>`
-          : ""
-      }
-    </ul>
-    <a href="producto.html?id=${
-      product.id
-    }" class="detalle-button">Ver Detalle</a>
+
+    <p class="product-price">$${product.precio.toLocaleString("es-AR")}</p>
+
+    <a href="producto.html?id=${product.id}" class="detalle-button">
+      Ver Detalle
+    </a>
   </div>
 </article>
+
   `
       productGrid.appendChild(productCard)
     })
