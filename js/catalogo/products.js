@@ -1,34 +1,34 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const productGrid = document.getElementById("product-grid")
-  const searchInput = document.getElementById("search-input")
-  const searchForm = document.querySelector(".search-container")
+  const productGrid = document.getElementById("product-grid");
+  const searchInput = document.getElementById("search-input");
+  const searchForm = document.querySelector(".search-container");
 
   // Simular carga asíncrona de productos
   async function loadProducts() {
     try {
       // Simulamos un retraso de red
-      await new Promise((resolve) => setTimeout(resolve, 800))
+      await new Promise((resolve) => setTimeout(resolve, 800));
 
       // Renderizar todos los productos inicialmente
-      renderProducts(productos)
+      renderProducts(productos);
     } catch (error) {
-      console.error("Error cargando productos:", error)
-      productGrid.innerHTML = `<p class="error">Error al cargar los productos. Intente nuevamente.</p>`
+      console.error("Error cargando productos:", error);
+      productGrid.innerHTML = `<p class="error">Error al cargar los productos. Intente nuevamente.</p>`;
     }
   }
 
   // Función para renderizar productos
   function renderProducts(products) {
-    productGrid.innerHTML = ""
+    productGrid.innerHTML = "";
 
     if (products.length === 0) {
-      productGrid.innerHTML = `<p class="no-results">No se encontraron productos</p>`
-      return
+      productGrid.innerHTML = `<p class="no-results">No se encontraron productos</p>`;
+      return;
     }
 
     products.forEach((product) => {
-      const productCard = document.createElement("div")
-      productCard.className = "product-card"
+      const productCard = document.createElement("div");
+      productCard.className = "product-card";
       productCard.innerHTML = `<article class="product-card">
   <figure class="product-image-container">
     <img src="${product.imagen}" alt="${product.nombre}" />
@@ -45,9 +45,9 @@ document.addEventListener("DOMContentLoaded", () => {
   </div>
 </article>
 
-  `
-      productGrid.appendChild(productCard)
-    })
+  `;
+      productGrid.appendChild(productCard);
+    });
   }
 
   // filtro de busqueda
@@ -56,29 +56,29 @@ document.addEventListener("DOMContentLoaded", () => {
       .toLowerCase()
       .normalize("NFD")
       .replace(/[\u0300-\u036f]/g, "")
-      .trim()
+      .trim();
     if (searchTerm === "") {
-      renderProducts(productos)
-      return
+      renderProducts(productos);
+      return;
     }
 
     const filteredProducts = productos.filter((product) => {
       const nombreNormalizado = product.nombre
         .toLowerCase()
         .normalize("NFD")
-        .replace(/[\u0300-\u036f]/g, "")
-      return nombreNormalizado.includes(searchTerm)
-    })
+        .replace(/[\u0300-\u036f]/g, "");
+      return nombreNormalizado.includes(searchTerm);
+    });
 
-    renderProducts(filteredProducts)
+    renderProducts(filteredProducts);
   }
 
   // Event listeners
   searchForm.addEventListener("submit", (e) => {
-    e.preventDefault()
-    searchProducts()
-  })
+    e.preventDefault();
+    searchProducts();
+  });
 
   // Inicializar
-  loadProducts()
-})
+  loadProducts();
+});
