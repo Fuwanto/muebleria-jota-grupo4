@@ -155,3 +155,13 @@
 .home-page .btn-primary:hover {
   background: var(--color-primary);
 }
+.destacados-cta {
+  text-align: center;      
+  margin-top: 40px;        
+}
+
+.destacados-cta .btn-primary {
+  display: inline-block;   
+  padding: 12px 28px;     
+  font-size: 1rem;
+}
