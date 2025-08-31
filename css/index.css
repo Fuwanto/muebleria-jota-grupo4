@@ -55,7 +55,7 @@
   letter-spacing:.02em;
 }
 
-/* Grid de destacados (reutiliza naming del catálogo) */
+/* Grid de destacados */
 .home-page .product-grid{
   display:grid;
   grid-template-columns: 1fr 1fr;
@@ -81,7 +81,7 @@
   display:block;
 }
 .home-page .product-info, 
-.home-page .product-name{  /* soporta tu HTML actual */
+.home-page .product-name{ 
   padding: 12px 14px;
 }
 .home-page .product-name h3{
@@ -100,15 +100,11 @@
 }
 .home-page .detalle-button:hover{ background:#e6e6e6; }
 
-/* CTA “ver todos” debajo de destacados */
-.home-page .featured-cta{
-  text-align:center;
-  margin: 22px 0 10px;
-}
+
 .home-page .hero {
   position: relative;
   width: 100%;
-  height: 90vh; /* casi toda la pantalla */
+  height: 90vh; 
   background: url("../assets/hero/hero_ banner.png") center/cover no-repeat;
   display: flex;
   align-items: center;
@@ -117,7 +113,7 @@
   text-align: center;
 }
 
-/* Overlay (oscurece la imagen para que se lea el texto) */
+/* Overlay */
 .home-page .hero::before {
   content: "";
   position: absolute;
@@ -154,4 +150,14 @@
 }
 .home-page .btn-primary:hover {
   background: var(--color-primary);
+}
+.destacados-cta {
+  text-align: center;      
+  margin-top: 40px;        
+}
+
+.destacados-cta .btn-primary {
+  display: inline-block;   
+  padding: 12px 28px;     
+  font-size: 1rem;
 }
