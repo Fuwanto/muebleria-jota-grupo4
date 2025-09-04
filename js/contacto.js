@@ -37,6 +37,12 @@ document.addEventListener("DOMContentLoaded", () => {
     div.className = "success-banner";
     div.textContent = message;
     form.parentElement.insertBefore(div, form);
+
+    setTimeout(() => {
+      div.classList.add("fade-out");
+
+      setTimeout(() => div.remove(), 350);
+      }, 3000);
   }
 
   form.addEventListener("submit", (e) => {
