@@ -185,7 +185,7 @@ const productos = [
       "Silla ergonómica regulable en altura con respaldo de malla transpirable y asiento tapizado en tejido reciclado. Diseñada para largas jornadas de trabajo con máximo confort.",
     imagen: "/assets/productos/silla_de_trabajo_belgrano.png",
     precio: 150000,
-    destacado: true,
+    destacado: false,
     detalles: [
       { label: "Medidas", value: "60 × 60 × 90-100 cm" },
       { label: "Materiales", value: "Malla técnica, tejido reciclado" },
